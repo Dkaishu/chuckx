@@ -17,14 +17,15 @@ package com.readystatesoftware.chuck.internal.ui;
 
 import android.content.Context;
 import android.database.Cursor;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.widget.CursorAdapter;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.core.content.ContextCompat;
+import androidx.cursoradapter.widget.CursorAdapter;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.readystatesoftware.chuck.R;
 import com.readystatesoftware.chuck.internal.data.HttpTransaction;
@@ -35,7 +36,7 @@ class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.ViewHol
 
     private final Context context;
     private final OnListFragmentInteractionListener listener;
-    private final CursorAdapter cursorAdapter;
+    private final CursorAdapter                     cursorAdapter;
 
     private final int colorDefault;
     private final int colorRequested;
