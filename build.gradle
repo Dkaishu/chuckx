@@ -2,11 +2,14 @@
 
 buildscript {
     repositories {
+        //noinspection JcenterRepositoryObsolete
         jcenter()
         google()
+        maven { url "https://jitpack.io" }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.6.0'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -14,12 +17,11 @@ buildscript {
 }
 
 allprojects {
-    version = VERSION_NAME
-    group = GROUP
-
     repositories {
+        //noinspection JcenterRepositoryObsolete
         jcenter()
         google()
+        maven { url "https://jitpack.io" }
     }
 }
 
@@ -31,7 +33,6 @@ ext {
     minSdkVersion = 24
     targetSdkVersion = 32
     compileSdkVersion = 32
-//    buildToolsVersion = '26.0.1'
 
     appcompatLibVersion = '1.5.1'
     okhttp3Version = '3.14.9'

@@ -6,9 +6,9 @@ android {
     defaultConfig {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        applicationId "com.readystatesoftware.chuck.sample"
-        versionCode 1
-        versionName "1.0"
+        applicationId "com.dkaishu.chuckx.sample"
+        versionCode 2
+        versionName "2.0"
     }
 
     buildTypes {
