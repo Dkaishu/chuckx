@@ -12,7 +12,7 @@ Chuck 的 MainActivity 在其自身的进程中启动，Android 7.x 的多窗口
 
 ![Multi-Window](assets/multiwindow.gif)
 
-Chuck requires Android 7+ (minSdkVersion = 24 ,targetSdkVersion = 32) and OkHttp 3.x.
+Chuck requires Android 7+ (minSdkVersion = 24) and OkHttp 3.x.
 
 **Warning**: The data generated and stored when using this interceptor may contain sensitive information such as Authorization or Cookie headers, and the contents of request and response bodies. It is intended for use during development, and not in release builds or other production deployments.
 
