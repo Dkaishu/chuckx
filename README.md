@@ -33,8 +33,8 @@ Add it in your root build.gradle at the end of repositories:
 Add the dependency
 ```gradle
 	dependencies {
-	    debugImplementation 'com.github.Dkaishu.chuckx:library-no-op:v2.1.0'
-        releaseImplementation 'com.github.Dkaishu.chuckx:library:v2.1.0'
+	    releaseImplementation 'com.github.Dkaishu.chuckx:library-no-op:v2.1.0'
+        debugImplementation 'com.github.Dkaishu.chuckx:library:v2.1.0'
 	}
 ```
 

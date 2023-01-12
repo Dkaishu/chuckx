@@ -32,8 +32,8 @@ Chuck requires Android 7+ (minSdkVersion = 24 ,targetSdkVersion = 32) and OkHttp
 在 module 内的 build.gradle 添加依赖
 ```gradle
 	dependencies {
-	    debugImplementation 'com.github.Dkaishu.chuckx:library-no-op:v2.1.0'
-	    releaseImplementation 'com.github.Dkaishu.chuckx:library:v2.1.0'
+	    releaseImplementation 'com.github.Dkaishu.chuckx:library-no-op:v2.1.0'
+        debugImplementation 'com.github.Dkaishu.chuckx:library:v2.1.0'
 	}
 ```
 
