@@ -1,16 +1,14 @@
 Chuck  [![](https://jitpack.io/v/Dkaishu/chuckx.svg)](https://jitpack.io/#Dkaishu/chuckx)
 =====
-[中文文档](https://raw.githubusercontent.com/Dkaishu/chuckx/master/README-zh.md)
 
-Chuck is a simple in-app HTTP inspector for Android OkHttp clients. Chuck intercepts and persists all HTTP requests and responses inside your application, and provides a UI for inspecting their content.
+Chuck是一个简洁的应用内 HTTP inspector ，它用于 Android OkHttp 客户端。Chuck 会在应用程序中拦截并持久化所有的 HTTP 请求和响应，并提供一个查看界面。
 
-As you can see, this repository is forked from [jgilfelt/chuck](https://github.com/jgilfelt/chuck), which is a great library and helped me a lot, but the original repository seems to have stopped being maintained, so I migrated it to **Androidx**, and continue to maintain it.
+如你所见，本仓库 fork 自[jgilfelt/chuck](https://github.com/jgilfelt/chuck),，它是一个非常棒的库，对我非常有用，但是原仓库好像已经停止维护，因此我将其迁移到Androidx，并继续维护。
 
 ![Chuck](assets/chuck.gif)
 
-Apps using Chuck will display a notification showing a summary of ongoing HTTP activity. Tapping on the notification launches the full Chuck UI. Apps can optionally suppress the notification, and launch the Chuck UI directly from within their own interface. HTTP interactions and their contents can be exported via a share intent.
-
-The main Chuck activity is launched in its own task, allowing it to be displayed alongside the host app UI using Android 7.x multi-window support.
+使用 Chuck 的应用程序将发送通知，显示正在进行的 HTTP 活动的摘要。点击该通知可以启动完整的 Chuck 用户界面。应用程序也可以选择不使用通知，而是从自己界面中直接启动 Chuck 用户界面。HTTP 交互和它们的内容可以通过 intent 导出。
+Chuck 的 MainActivity 在其自身的进程中启动，Android 7.x 的多窗口支持与可与主应用程序 UI 一起显示。
 
 ![Multi-Window](assets/multiwindow.gif)
 
@@ -18,10 +16,10 @@ Chuck requires Android 7+ (minSdkVersion = 24 ,targetSdkVersion = 32) and OkHttp
 
 **Warning**: The data generated and stored when using this interceptor may contain sensitive information such as Authorization or Cookie headers, and the contents of request and response bodies. It is intended for use during development, and not in release builds or other production deployments.
 
-Setup
+使用
 -----
+在根目录下的 build.gradle 添加 jitpack 仓库:
 
-Add it in your root build.gradle at the end of repositories:
 ```gradle
 	allprojects {
 		repositories {
@@ -30,7 +28,8 @@ Add it in your root build.gradle at the end of repositories:
 		}
 	}
 ```
-Add the dependency
+
+在 module 内的 build.gradle 添加依赖
 ```gradle
 	dependencies {
 	    debugImplementation 'com.github.Dkaishu.chuckx:library-no-op:v2.0.0'
@@ -38,7 +37,7 @@ Add the dependency
 	}
 ```
 
-In your application code, create an instance of `ChuckInterceptor` (you'll need to provide it with a `Context`, because Android) and add it as an interceptor when building your OkHttp client:
+在代码中，创建一个`ChuckInterceptor`的实例，并在创建 OkHttpClient 时将其作为一个拦截器加入。
 
 ```java
 OkHttpClient client = new OkHttpClient.Builder()
@@ -46,7 +45,7 @@ OkHttpClient client = new OkHttpClient.Builder()
   .build();
 ```
 
-That's it! Chuck will now record all HTTP interactions made by your OkHttp client. You can optionally disable the notification by calling `showNotification(false)` on the interceptor instance, and launch the Chuck UI directly within your app with the intent from `Chuck.getLaunchIntent()`.
+非常简单! 现在 Chuck 将记录所有由你的 OkHttpClient 发起的 HTTP 交互。你可以通过在拦截器实例上调用`showNotification(false)`来禁用通知，并通过`Chuck.getLaunchIntent()`的直接在你的应用程序中启动 Chuck 用户界面。
 
 FAQ
 ---
@@ -57,10 +56,10 @@ FAQ
 
 Please refer to [this section of the OkHttp wiki](https://github.com/square/okhttp/wiki/Interceptors#choosing-between-application-and-network-interceptors). You can choose to use Chuck as either an application or network interceptor, depending on your requirements.
 
-Acknowledgements
+补充
 ----------------
 
-Chuck uses the following open source libraries:
+Chuck 使用了以下库:
 
 - [OkHttp](https://github.com/square/okhttp) - Copyright Square, Inc.
 - [Gson](https://github.com/google/gson) - Copyright Google Inc.
@@ -70,13 +69,13 @@ License
 -------
 
     Copyright (C) 2017 Jeff Gilfelt.
-
+    
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
-
+    
        http://www.apache.org/licenses/LICENSE-2.0
-
+    
     Unless required by applicable law or agreed to in writing, software
     distributed under the License is distributed on an "AS IS" BASIS,
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -86,13 +85,13 @@ License
 -------
 
     Copyright (C) 2017 Dkaishu.
-
+    
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
-
+    
        http://www.apache.org/licenses/LICENSE-2.0
-
+    
     Unless required by applicable law or agreed to in writing, software
     distributed under the License is distributed on an "AS IS" BASIS,
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
