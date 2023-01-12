@@ -33,7 +33,7 @@ Chuck requires Android 7+ (minSdkVersion = 24 ,targetSdkVersion = 32) and OkHttp
 ```gradle
 	dependencies {
 	    debugImplementation 'com.github.Dkaishu.chuckx:library-no-op:v2.1.0'
-        releaseImplementation 'com.github.Dkaishu.chuckx:library:v2.1.0'
+	    releaseImplementation 'com.github.Dkaishu.chuckx:library:v2.1.0'
 	}
 ```
 
