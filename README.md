@@ -1,6 +1,6 @@
 Chuck  [![](https://jitpack.io/v/Dkaishu/chuckx.svg)](https://jitpack.io/#Dkaishu/chuckx)
 =====
-[中文文档](https://raw.githubusercontent.com/Dkaishu/chuckx/master/README-zh.md)
+[中文文档](/README-zh.md)
 
 Chuck is a simple in-app HTTP inspector for Android OkHttp clients. Chuck intercepts and persists all HTTP requests and responses inside your application, and provides a UI for inspecting their content.
 
