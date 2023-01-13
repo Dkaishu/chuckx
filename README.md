@@ -2,7 +2,7 @@ Chuck  [![](https://jitpack.io/v/Dkaishu/chuckx.svg)](https://jitpack.io/#Dkaish
 =====
 [中文文档](/README-zh.md)
 
-Chuck is a simple in-app HTTP inspector for Android OkHttp clients. Chuck intercepts and persists all HTTP requests and responses inside your application, and provides a UI for inspecting their content.
+Chuck is a simple in-app HTTP inspector that depends on Androidx for Android OkHttp clients. Chuck intercepts and persists all HTTP requests and responses inside your application, and provides a UI for inspecting their content.
 
 As you can see, this repository is forked from [jgilfelt/chuck](https://github.com/jgilfelt/chuck), which is a great library and helped me a lot, but the original repository seems to have stopped being maintained, so I migrated it to **Androidx**, and continue to maintain it.
 
@@ -55,34 +55,18 @@ FAQ
 - Why are retries and redirects not being captured discretely?
 - Why are my encoded request/response bodies not appearing as plain text?
 
-Please refer to [this section of the OkHttp wiki](https://github.com/square/okhttp/wiki/Interceptors#choosing-between-application-and-network-interceptors). You can choose to use Chuck as either an application or network interceptor, depending on your requirements.
+Please refer to [this section of the OkHttp wiki](https://square.github.io/okhttp/features/interceptors/#choosing-between-application-and-network-interceptors). You can choose to use Chuck as either an application or network interceptor, depending on your requirements.
 
 Acknowledgements
 ----------------
 
-Chuck uses the following open source libraries:
-
+Chuckx uses the following open source libraries. Special thanks to chunk:
+- **[chuck](https://github.com/jgilfelt/chuck) - [jgilfelt](https://github.com/jgilfelt).**
 - [OkHttp](https://github.com/square/okhttp) - Copyright Square, Inc.
 - [Gson](https://github.com/google/gson) - Copyright Google Inc.
 - [Cupboard](https://bitbucket.org/littlerobots/cupboard) - Copyright Little Robots.
 
 License
--------
-
-    Copyright (C) 2017 Jeff Gilfelt.
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
-
 -------
 
     Copyright (C) 2017 Dkaishu.
