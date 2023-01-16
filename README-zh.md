@@ -1,9 +1,9 @@
 Chuck  [![](https://jitpack.io/v/Dkaishu/chuckx.svg)](https://jitpack.io/#Dkaishu/chuckx)
 =====
 
-Chuck是一个针对 OkHttp 的基于 Androidx 的 HTTP 拦截器（inspector）。Chuck 会拦截并持久化所有在应用程序内的 HTTP 请求和响应，并提供一个查看界面。
+Chuck 是一个针对 OkHttp 的基于 Androidx 的 HTTP 拦截器（inspector）。Chuck 会拦截并持久化在应用内的 HTTP 请求和响应，并提供一个查看界面。
 
-如你所见，本仓库 fork 自[jgilfelt/chuck](https://github.com/jgilfelt/chuck),，它是一个非常棒的库，对我非常有用，但是原仓库好像已经停止维护，因此我将其迁移到Androidx，并继续维护。
+如你所见，本仓库 fork 自[jgilfelt/chuck](https://github.com/jgilfelt/chuck)，它是一个非常棒的库，但是原仓库好像已经停止维护，我将其迁移到 Androidx，并继续维护。如果你的应用没有使用 Androidx，建议使用原 Chunk 库。
 
 ![Chuck](assets/chuck.gif)
 
@@ -21,20 +21,20 @@ Chuck requires Android 7+ (minSdkVersion = 24) and OkHttp 3.x.
 在根目录下的 build.gradle 添加 jitpack 仓库:
 
 ```gradle
-	allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
+allprojects {
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
 	}
+}
 ```
 
 在 module 内的 build.gradle 添加依赖
 ```gradle
-	dependencies {
-	    releaseImplementation 'com.github.Dkaishu.chuckx:library-no-op:v2.1.0'
-        debugImplementation 'com.github.Dkaishu.chuckx:library:v2.1.0'
-	}
+dependencies {
+    releaseImplementation 'com.github.Dkaishu.chuckx:library-no-op:v2.1.0'
+    debugImplementation 'com.github.Dkaishu.chuckx:library:v2.1.0'
+}
 ```
 
 在代码中，创建一个`ChuckInterceptor`的实例，并在创建 OkHttpClient 时将其作为一个拦截器加入。

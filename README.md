@@ -23,19 +23,19 @@ Setup
 
 Add it in your root build.gradle at the end of repositories:
 ```gradle
-	allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
+allprojects {
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
 	}
+}
 ```
 Add the dependency
 ```gradle
-	dependencies {
-	    releaseImplementation 'com.github.Dkaishu.chuckx:library-no-op:v2.1.0'
-        debugImplementation 'com.github.Dkaishu.chuckx:library:v2.1.0'
-	}
+dependencies {
+    releaseImplementation 'com.github.Dkaishu.chuckx:library-no-op:v2.1.0'
+    debugImplementation 'com.github.Dkaishu.chuckx:library:v2.1.0'
+}
 ```
 
 In your application code, create an instance of `ChuckInterceptor` (you'll need to provide it with a `Context`, because Android) and add it as an interceptor when building your OkHttp client:
