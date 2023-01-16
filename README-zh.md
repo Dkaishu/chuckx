@@ -12,7 +12,7 @@ Chuckx 的 MainActivity 在独立的进程中启动，在Android 7.x 的多窗�
 
 ![Multi-Window](assets/multiwindow.gif)
 
-Chuckx requires Android 7+ (minSdkVersion = 24) and OkHttp 3.x.
+Chuckx requires Android 5+ (minSdkVersion = 21) and OkHttp 3.x.
 
 **Warning**: 使用 Chunk 时产生和存储的数据可能包含敏感信息，如授权 token 或 Cookie，以及请求和响应体的内容。Chunk 旨在开发过程中使用，而不是在 release 版本或其他生产部署中使用。
 

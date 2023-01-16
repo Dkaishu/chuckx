@@ -14,7 +14,7 @@ The main Chuckx activity is launched in its own task, allowing it to be displaye
 
 ![Multi-Window](assets/multiwindow.gif)
 
-Chuckx requires Android 7+ (minSdkVersion = 24) and OkHttp 3.x.
+Chuckx requires Android 5+ (minSdkVersion = 21) and OkHttp 3.x.
 
 **Warning**: The data generated and stored when using this interceptor may contain sensitive information such as Authorization or Cookie headers, and the contents of request and response bodies. It is intended for use during development, and not in release builds or other production deployments.
 
