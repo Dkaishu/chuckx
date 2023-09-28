@@ -28,6 +28,7 @@ import androidx.fragment.app.Fragment;
 
 import com.dkaishu.chuckx.R;
 import com.dkaishu.chuckx.internal.data.HttpTransaction;
+import com.dkaishu.chuckx.internal.support.ThreadUtils;
 
 public class TransactionPayloadFragment extends Fragment implements TransactionFragment {
 
@@ -85,12 +86,34 @@ public class TransactionPayloadFragment extends Fragment implements TransactionF
         if (isAdded() && transaction != null) {
             switch (type) {
                 case TYPE_REQUEST:
-                    setText(transaction.getRequestHeadersString(true),
-                            transaction.getFormattedRequestBody(), transaction.requestBodyIsPlainText());
+                    ThreadUtils.run(new Runnable() {
+                        @Override
+                        public void run() {
+                            final String headersString = transaction.getRequestHeadersString(true);
+                            final String requestBody = transaction.getFormattedRequestBody();
+                            ThreadUtils.runOnUIThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    setText(headersString, requestBody, transaction.requestBodyIsPlainText());
+                                }
+                            });
+                        }
+                    });
                     break;
                 case TYPE_RESPONSE:
-                    setText(transaction.getResponseHeadersString(true),
-                            transaction.getFormattedResponseBody(), transaction.responseBodyIsPlainText());
+                    ThreadUtils.run(new Runnable() {
+                        @Override
+                        public void run() {
+                            final String headersString = transaction.getResponseHeadersString(true);
+                            final String responseBody = transaction.getFormattedResponseBody();
+                            ThreadUtils.runOnUIThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    setText(headersString, responseBody, transaction.responseBodyIsPlainText());
+                                }
+                            });
+                        }
+                    });
                     break;
             }
         }
