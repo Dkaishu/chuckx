@@ -17,6 +17,7 @@ package com.dkaishu.chuckx.internal.ui;
 
 import android.os.Bundle;
 import android.text.Html;
+import android.text.Spanned;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -91,10 +92,11 @@ public class TransactionPayloadFragment extends Fragment implements TransactionF
                         public void run() {
                             final String headersString = transaction.getRequestHeadersString(true);
                             final String requestBody = transaction.getFormattedRequestBody();
+                            final Spanned spannedText = Html.fromHtml(headersString);
                             ThreadUtils.runOnUIThread(new Runnable() {
                                 @Override
                                 public void run() {
-                                    setText(headersString, requestBody, transaction.requestBodyIsPlainText());
+                                    setText(headersString, spannedText, requestBody, transaction.requestBodyIsPlainText());
                                 }
                             });
                         }
@@ -106,10 +108,11 @@ public class TransactionPayloadFragment extends Fragment implements TransactionF
                         public void run() {
                             final String headersString = transaction.getResponseHeadersString(true);
                             final String responseBody = transaction.getFormattedResponseBody();
+                            final Spanned spannedText = Html.fromHtml(headersString);
                             ThreadUtils.runOnUIThread(new Runnable() {
                                 @Override
                                 public void run() {
-                                    setText(headersString, responseBody, transaction.responseBodyIsPlainText());
+                                    setText(headersString, spannedText, responseBody, transaction.responseBodyIsPlainText());
                                 }
                             });
                         }
@@ -119,9 +122,9 @@ public class TransactionPayloadFragment extends Fragment implements TransactionF
         }
     }
 
-    private void setText(String headersString, String bodyString, boolean isPlainText) {
+    private void setText(String headersString, Spanned spannedText, String bodyString, boolean isPlainText) {
         headers.setVisibility((TextUtils.isEmpty(headersString) ? View.GONE : View.VISIBLE));
-        headers.setText(Html.fromHtml(headersString));
+        headers.setText(spannedText);
         if (!isPlainText) {
             body.setText(getString(R.string.chuck_body_omitted));
         } else {
