@@ -20,11 +20,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.dkaishu.chuckx.internal.support.ThreadUtils;
 import com.google.android.material.tabs.TabLayout;
 import com.dkaishu.chuckx.R;
 import com.dkaishu.chuckx.internal.data.ChuckContentProvider;
@@ -126,9 +128,20 @@ public class TransactionActivity extends BaseChuckActivity implements LoaderMana
     }
 
     @Override
-    public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
-        transaction = LocalCupboard.getInstance().withCursor(data).get(HttpTransaction.class);
-        populateUI();
+    public void onLoadFinished(Loader<Cursor> loader, final Cursor data) {
+        ThreadUtils.run(new Runnable() {
+            @Override
+            public void run() {
+                transaction = LocalCupboard.getInstance().withCursor(data).get(HttpTransaction.class);
+                ThreadUtils.runOnUIThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        populateUI();
+                    }
+                });
+            }
+        });
+
     }
 
     @Override
