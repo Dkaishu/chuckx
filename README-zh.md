@@ -32,8 +32,8 @@ allprojects {
 在 module 内的 build.gradle 添加依赖
 ```gradle
 dependencies {
-    releaseImplementation 'com.github.Dkaishu.chuckx:library-no-op:v2.1.0'
-    debugImplementation 'com.github.Dkaishu.chuckx:library:v2.1.0'
+    releaseImplementation 'com.github.Dkaishu.chuckx:library-no-op:v2.1.5'
+    debugImplementation 'com.github.Dkaishu.chuckx:library:v2.1.5'
 }
 ```
 

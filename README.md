@@ -33,8 +33,8 @@ allprojects {
 Add the dependency
 ```gradle
 dependencies {
-    releaseImplementation 'com.github.Dkaishu.chuckx:library-no-op:v2.1.0'
-    debugImplementation 'com.github.Dkaishu.chuckx:library:v2.1.0'
+    releaseImplementation 'com.github.Dkaishu.chuckx:library-no-op:v2.1.5'
+    debugImplementation 'com.github.Dkaishu.chuckx:library:v2.1.5'
 }
 ```
 
