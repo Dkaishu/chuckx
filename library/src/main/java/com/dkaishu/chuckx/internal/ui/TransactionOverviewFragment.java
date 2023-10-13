@@ -85,7 +85,8 @@ public class TransactionOverviewFragment extends Fragment implements Transaction
 
     private void populateUI() {
         if (isAdded() && transaction != null) {
-            url.setText(transaction.getUrl());
+            String urlText = transaction.getUrl().length() > 20000 ? transaction.getUrl().substring(0, 20000) + "..." : transaction.getUrl();
+            url.setText(urlText);
             method.setText(transaction.getMethod());
             protocol.setText(transaction.getProtocol());
             status.setText(transaction.getStatus().toString());

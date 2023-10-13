@@ -21,7 +21,7 @@
     android:padding="12dp"
     android:background="?android:attr/selectableItemBackground">
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/code"
         android:layout_width="40dp"
         android:layout_height="wrap_content"
@@ -31,7 +31,7 @@
         android:textAppearance="@style/Chuck.TextAppearance.ListItem"
         tools:text="200"/>
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/path"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -41,7 +41,7 @@
         android:textAppearance="@style/Chuck.TextAppearance.ListItem"
         tools:text="GET /path/to/some/resource?goes=here"/>
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/host"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -70,14 +70,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/start"
             android:layout_width="72dp"
             android:layout_height="wrap_content"
             android:padding="2dp"
             tools:text="18:29:07" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/duration"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
@@ -85,7 +85,7 @@
             android:gravity="end"
             tools:text="8023 ms" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/size"
             android:layout_width="80dp"
             android:layout_height="wrap_content"

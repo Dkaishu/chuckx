@@ -31,13 +31,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/chuck_url"
             style="@style/Chuck.TextAppearance.Label"/>
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/url"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -50,13 +50,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/chuck_method"
                 style="@style/Chuck.TextAppearance.Label"/>
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/method"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -69,13 +69,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/chuck_protocol"
                 style="@style/Chuck.TextAppearance.Label"/>
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/protocol"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -88,13 +88,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/chuck_status"
                 style="@style/Chuck.TextAppearance.Label"/>
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/status"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -107,13 +107,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/chuck_response"
                 style="@style/Chuck.TextAppearance.Label"/>
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/response"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -126,13 +126,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/chuck_ssl"
                 style="@style/Chuck.TextAppearance.Label"/>
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/ssl"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -146,13 +146,13 @@
             android:layout_height="wrap_content"
             android:paddingTop="8dp">
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/chuck_request_time"
                 style="@style/Chuck.TextAppearance.Label"/>
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/request_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -165,13 +165,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/chuck_response_time"
                 style="@style/Chuck.TextAppearance.Label"/>
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/response_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -184,13 +184,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/chuck_duration"
                 style="@style/Chuck.TextAppearance.Label"/>
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/duration"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -204,13 +204,13 @@
             android:layout_height="wrap_content"
             android:paddingTop="8dp">
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/chuck_request_size"
                 style="@style/Chuck.TextAppearance.Label"/>
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/request_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -223,13 +223,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/chuck_response_size"
                 style="@style/Chuck.TextAppearance.Label"/>
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/response_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -242,13 +242,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/chuck_total_size"
                 style="@style/Chuck.TextAppearance.Label"/>
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/total_size"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

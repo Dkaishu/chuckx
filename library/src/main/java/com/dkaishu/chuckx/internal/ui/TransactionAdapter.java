@@ -68,7 +68,8 @@ class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.ViewHol
             public void bindView(View view, final Context context, Cursor cursor) {
                 final HttpTransaction transaction = LocalCupboard.getInstance().withCursor(cursor).get(HttpTransaction.class);
                 final ViewHolder holder = (ViewHolder) view.getTag();
-                holder.path.setText(transaction.getMethod() + " " + transaction.getPath());
+                String pathText = transaction.getMethod() + " " + transaction.getPath();
+                holder.path.setText(pathText.length() > 500 ? pathText.substring(0, 500) + "..." : pathText);
                 holder.host.setText(transaction.getHost());
                 holder.start.setText(transaction.getRequestStartTimeString());
                 holder.ssl.setVisibility(transaction.isSsl() ? View.VISIBLE : View.GONE);

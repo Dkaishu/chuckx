@@ -27,13 +27,13 @@
         android:padding="16dp"
         android:orientation="vertical" >
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/headers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textIsSelectable="true"/>
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/body"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

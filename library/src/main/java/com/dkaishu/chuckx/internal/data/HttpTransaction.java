@@ -16,6 +16,7 @@
 package com.dkaishu.chuckx.internal.data;
 
 import android.net.Uri;
+import android.text.TextUtils;
 
 import com.google.gson.reflect.TypeToken;
 import com.dkaishu.chuckx.internal.support.FormatUtils;
@@ -352,7 +353,11 @@ public class HttpTransaction {
     private List<HttpHeader> toHttpHeaderList(Headers headers) {
         List<HttpHeader> httpHeaders = new ArrayList<>();
         for (int i = 0, count = headers.size(); i < count; i++) {
-            httpHeaders.add(new HttpHeader(headers.name(i), headers.value(i)));
+            String value = headers.value(i);
+            if (!TextUtils.isEmpty(value) && value.length() > 1000) {
+                value = value.substring(0, 1000) + "...";
+            }
+            httpHeaders.add(new HttpHeader(headers.name(i), value));
         }
         return httpHeaders;
     }

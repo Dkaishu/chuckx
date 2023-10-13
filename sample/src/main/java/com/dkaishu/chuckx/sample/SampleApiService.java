@@ -28,6 +28,7 @@ import retrofit2.http.POST;
 import retrofit2.http.PUT;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
+import retrofit2.http.Url;
 
 class SampleApiService {
 
@@ -50,6 +51,8 @@ class SampleApiService {
     interface HttpbinApi {
         @GET("/get")
         Call<Void> get();
+        @GET()
+        Call<Void> getImg(@Url String url);
         @POST("/post")
         Call<Void> post(@Body Data body);
         @PATCH("/patch")
@@ -97,4 +100,6 @@ class SampleApiService {
         @GET("/cache/{seconds}")
         Call<Void> cache(@Path("seconds") int seconds);
     }
+
+
 }
