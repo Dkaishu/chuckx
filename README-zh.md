@@ -16,6 +16,8 @@ Chuckx requires Android 5+ (minSdkVersion = 21) and OkHttp 3.x.
 
 **Warning**: 使用 Chunk 时产生和存储的数据可能包含敏感信息，如授权 token 或 Cookie，以及请求和响应体的内容。Chunk 旨在开发过程中使用，而不是在 release 版本或其他生产部署中使用。
 
+**如果有任何问题，都可以在 issue 中提出。**
+
 使用
 -----
 在根目录下的 build.gradle 添加 jitpack 仓库:
