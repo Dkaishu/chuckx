@@ -19,6 +19,8 @@ Chuckx requires Android 5+ (minSdkVersion = 21) and OkHttp 3.x.
 **Warning**: The data generated and stored when using this interceptor may contain sensitive information such as Authorization or Cookie headers, and the contents of request and response bodies. It is intended for use during development, and not in release builds or other production deployments.
 
 **If there are any problems, they can all be raised in the issue.**
+
+
 Setup
 -----
 
